@@ -40,7 +40,7 @@ class Chef
 
         protected
         def brew(*args)
-          get_response_from_command("brew #{args.join(' ')}")
+          get_response_from_command("sudo -u fukayatsu brew #{args.join(' ')}")
         end
 
         def current_installed_version

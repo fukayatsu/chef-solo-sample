@@ -26,6 +26,8 @@ execute "update homebrew from github" do
   command "/usr/local/bin/brew update || true"
 end
 
-package "zsh" do
-  action :install
+%w{zsh tmux}.each do |pkg|
+  package pkg do
+    action :install
+  end
 end
